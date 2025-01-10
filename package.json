@@ -1,0 +1,23 @@
+{
+    "name": "www",
+    "version": "1.0.0",
+    "description": "www",
+    "type": "module",
+    "module": "index.ts",
+    "devDependencies": {
+        "@types/bun": "latest",
+        "live-server": "^1.2.2",
+        "rimraf": "^6.0.1"
+    },
+    "peerDependencies": {
+        "typescript": "^5.6.3"
+    },
+    "scripts": {
+        "dev": "bun run server.ts --watch",
+        "build": "rimraf dist && bun build --experimental-html --experimental-css ./src/index.html --outdir=dist --minify",
+        "preview": "live-server dist",
+        "compiler-TS": "bun build ./src/index.ts --compile --outfile build/bun-upgrade",
+        "run-mac-linux-wsl": "./build/bun-upgrade",
+        "run-win": "./build/bun-upgrade.exe"
+    }
+}
