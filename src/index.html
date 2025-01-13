@@ -1,20 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mi Sitio con Bun</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="index.ts"></script>
+  </head>
 
-    <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-    <h1 class="text-5xl">¡Hola, mundo!</h1>
-    
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <body class="bg-green-500 min-h-screen overflow-y-hidden p-2">
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="index.ts" type="module"></script>
-</body>
-
+    <div class="min-h-screen min-w-screen grid place-items-center">
+      <div class="mockup-phone">
+        <div class="camera"></div>
+        <div class="display">
+          <div class="artboard artboard-demo phone-1">
+            <button class="btn btn-xs my-2 btn-info" onclick="info()">
+              Info
+            </button>
+            <button class="btn btn-xs my-2 btn-success">Success</button>
+            <button class="btn btn-xs my-2 btn-warning" onclick="info()">
+              Warning
+            </button>
+            <button class="btn btn-xs my-2 btn-error" onclick="info()">
+              Error
+            </button>
+            <h1 class="text-xl">¡Hola desde HTML!</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
